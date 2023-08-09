@@ -9,7 +9,7 @@ const DessertsList = (props) =>{
         .map((dessert) => {
             return(
                 <li>
-                    {dessert.name} - {dessert.calories}cal
+                    {dessert.name} - {dessert.calories}cal = {dessert.price}
                 </li>
             )
         })
