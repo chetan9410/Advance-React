@@ -3,7 +3,9 @@ import DessertsList from "./components/DessertsList";
 import ListItems from "./components/ListItems";
 import Form from "./components/Form";
 import FeedBack from "./components/FeedBack";
+import FormValidate from "./components/FormValidate";
 import "./App.css";
+import "./Form.css";
 const dessert = [
   {
     name: "Hot Chocolate",
@@ -43,7 +45,8 @@ function App(){
       <DessertsList data={dessert} />
       <hr />
       <Form />
-      <FeedBack />
+      <FeedBack /> <br /> <hr />
+      <FormValidate />
     </div>
   )
 }
