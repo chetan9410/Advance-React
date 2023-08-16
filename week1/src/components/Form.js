@@ -12,7 +12,7 @@ function Form(){
         <div className="App">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Name : </label>
+                    <label> Name : </label>
                     <input type="text" name="name" placeholder="name" value={name} onChange={(e)=>setName(e.target.value)}/>
                 </div><br />
                 <button disabled={!name} type="sumbit">Submit</button>

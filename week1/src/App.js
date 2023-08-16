@@ -6,6 +6,9 @@ import FeedBack from "./components/FeedBack";
 import FormValidate from "./components/FormValidate";
 import "./App.css";
 import "./Form.css";
+import { ThemeProvider, useTheme } from "./components/ThemeChanger";
+import Switch from "./switch";
+
 const dessert = [
   {
     name: "Hot Chocolate",
@@ -33,11 +36,25 @@ const dessert = [
   }
 ];
 
-
+const Title = ({children}) => {
+  const {theme} = useTheme();
+  return(
+    <h1 
+      style={{ color: theme ==="light"? "black":"white", textAlign: "center"}}
+    >
+      {children}
+    </h1>
+  )
+}
 
 function App(){
+  const {theme} = useTheme();
   return(
-    <div className= "App">
+    <div className= "App"
+      style={{ backgroundColor: theme === "light"? "white":"black", }}
+    >
+      <Title>Pizza Mania 🍕</Title>
+      <Switch />
       <h1>Menu of dessert</h1>
       <ListItems data={dessert} />
       <hr /> <br />
@@ -51,7 +68,15 @@ function App(){
   )
 }
 
-export default App;
+function Root(){
+  return(
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  )
+}
+
+export default Root;
 
 // function App() {
 //   // State to track whether to show low-calorie desserts or not
