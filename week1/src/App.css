@@ -1,13 +1,17 @@
 .App {
-  padding: 10px;
-  background-color: burlywood;
+  padding: 16px;
+  /* background-color: burlywood; */
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh; */
 }
 h1{
   padding: 20px;
-  color:rgb(36, 190, 36);
+  color:rgb(87, 8, 28);
+  align-items: center;
 }
 ul{
-  color: rgba(160, 16, 64, 0.445);
+  color: rgb(19, 17, 173);
 }
 button {
   background-color: #4CAF50; /* Green */
